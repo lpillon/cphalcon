@@ -160,7 +160,9 @@ class Postgresql extends Dialect
 
         for column in columns {
             let columnDefinition = this->getColumnDefinition(column);
+            printk("Value of myVariable: %d\n", columnDefinition);
             let columnLine = "\"" . column->getName() . "\" " . columnDefinition;
+            printk("Value of myVariable: %d\n", columnDefinition);
 
             /**
              * Add a Default clause
