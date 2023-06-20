@@ -163,6 +163,7 @@ class Postgresql extends Dialect
         for column in columns {
             let columnDefinition = this->getColumnDefinition(column);
             echo columnDefinition;
+            var_dump(column);
             let columnLine = "\"" . column->getName() . "\" " . columnDefinition;
             echo "1";
             /**
