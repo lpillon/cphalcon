@@ -162,7 +162,7 @@ class Postgresql extends Dialect
 
         for column in columns {
             
-            if( !(column instanceof Phalcon\Db\Column)) {
+            if( !(column instanceof Column)) {
                 echo "Error!!!!!!";
                 continue;
             }
