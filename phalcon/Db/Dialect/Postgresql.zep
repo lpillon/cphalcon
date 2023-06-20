@@ -123,7 +123,7 @@ class Postgresql extends Dialect
     public function createTable(string! tableName, string! schemaName, array! definition) -> string
     {
         echo "CHEGUEI!!!";
-        
+
         var temporary, options, table, columns, column, indexes, index,
             reference, references, indexName, indexType, onDelete, onUpdate,
             columnDefinition;
@@ -163,7 +163,7 @@ class Postgresql extends Dialect
         for column in columns {
             let columnDefinition = this->getColumnDefinition(column);
             echo columnDefinition;
-            echo instanceof(column);
+            echo instanceof column;
             let columnLine = "\"" . column->getName() . "\" " . columnDefinition;
 
             /**
