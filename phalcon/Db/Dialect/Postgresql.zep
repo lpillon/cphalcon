@@ -122,11 +122,7 @@ class Postgresql extends Dialect
      */
     public function createTable(string! tableName, string! schemaName, array! definition) -> string
     {
-        printk("CHAMOU NOIS!");
-
-        throw new Exception(
-            "The index 'sql' is required in the definition array"
-        );
+        echo "CHEGUEI!!!";
         
         var temporary, options, table, columns, column, indexes, index,
             reference, references, indexName, indexType, onDelete, onUpdate,
@@ -166,10 +162,9 @@ class Postgresql extends Dialect
 
         for column in columns {
             let columnDefinition = this->getColumnDefinition(column);
-            
-            printk("Value of myVariable: %d\n", columnDefinition);
+            echo columnDefinition;
+            echo instanceof(column);
             let columnLine = "\"" . column->getName() . "\" " . columnDefinition;
-            printk("Value of myVariable: %d\n", columnDefinition);
 
             /**
              * Add a Default clause
