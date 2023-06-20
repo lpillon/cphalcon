@@ -75,7 +75,7 @@ class Version
      * D - Special release: 1 = alpha, 2 = beta, 3 = RC, 4 = stable
      * E - Special release version i.e. RC1, Beta2 etc.
      */
-    protected function getVersion() -> array
+    public function getVersion() -> array
     {
         return [6, 2, 2, 4, 0];
     }
