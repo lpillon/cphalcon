@@ -161,12 +161,23 @@ class Postgresql extends Dialect
         let primaryColumns = [];
 
         for column in columns {
+            
+            if( !(Phalcon\Db\Column instanceof \Phalcon\Db\Column)) {
+                echo "Error!!!!!!";
+                continue;
+            }
+
             let columnDefinition = this->getColumnDefinition(column);
+            
             echo columnDefinition ."\n";
             var_dump(column);
-            var_dump(columns);
+            echo "\n";
+            
             let columnLine = "\"" . column->getName() . "\" " . columnDefinition;
-            var_dump("Passou!");
+            
+            var_dump("Passou da validacao!");
+            echo "\n";
+
             /**
              * Add a Default clause
              */
