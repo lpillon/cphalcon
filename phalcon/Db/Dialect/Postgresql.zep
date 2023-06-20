@@ -122,6 +122,7 @@ class Postgresql extends Dialect
      */
     public function createTable(string! tableName, string! schemaName, array! definition) -> string
     {
+        printk("CHAMOU NOIS!");
         var temporary, options, table, columns, column, indexes, index,
             reference, references, indexName, indexType, onDelete, onUpdate,
             columnDefinition;
