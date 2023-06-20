@@ -141,7 +141,7 @@ class Version
             }
         }
 
-        return result;
+        return "1.1.1";
     }
 
     /**
